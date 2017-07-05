@@ -1,11 +1,14 @@
+import * as HtmlWebpackPlugin from 'html-webpack-plugin'
+import * as path from 'path';
 import * as webpack from 'webpack';
 
 const config: webpack.Configuration = {
   entry: {
-    app: './src/index.ts',
+    client: './src/index.ts',
   },
   output: {
-    filename: 'dist/[name].js',
+    path: path.resolve('dist'),
+    filename: '[name].js',
   },
   module: {
     rules: [
@@ -17,7 +20,10 @@ const config: webpack.Configuration = {
   },
   resolve: {
     extensions: ['.ts']
-  }
+  },
+  plugins: [
+    new HtmlWebpackPlugin(),
+  ]
 }
 
 export default config
