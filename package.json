@@ -5,7 +5,16 @@
   "repository": "git@github.com:Nitive/visual.git",
   "author": "Maxim Samoilov <nitive@icloud.com>",
   "license": "MIT",
-  "dependencies": {
-    "typescript": "^2.4.1"
+  "scripts": {
+    "build": "webpack -p",
+    "start": "webpack"
+  },
+  "devDependencies": {
+    "@types/node": "^8.0.7",
+    "@types/webpack": "^3.0.1",
+    "ts-loader": "^2.2.2",
+    "ts-node": "^3.1.0",
+    "typescript": "^2.4.1",
+    "webpack": "^3.0.0"
   }
 }
